@@ -1,53 +1,36 @@
 
 public class Page {
-	private int processId;
-    private int physicalAddress;
-    private int virtualAddress;
-    private boolean recourse;
-    private boolean presence;
+	private boolean presence;
+    private int number;
+    private boolean r;
 
-    public Page(int processId)
-    {
-        this.processId = processId;
-        this.physicalAddress = -1;
-        this.virtualAddress = -1;
-        this.recourse = false;
-        this.presence = false;
-    }
-    public boolean isRecourse()
-    {
-        return recourse;
-    }
-    public void setRecourse(boolean recourse)
-    {
-        this.recourse = recourse;
-    }
-    public boolean isPresent()
-    {
-        return presence;
-    }
-    public void setPresence(boolean presence)
-    {
+    public Page(boolean presence, boolean r){
+        this.r = r;
         this.presence = presence;
     }
-    public int getProcessId()
-    {
-        return processId;
+
+    public boolean isPresence() {
+        return presence;
     }
-    public int getPhysicalAddress()
-    {
-        return physicalAddress;
+
+    public int getNumber() {
+        return number;
     }
-    public void setPhysicalAddress(int physicalAddress)
-    {
-        this.physicalAddress = physicalAddress;
+
+    public void setNumber(int number) {
+        this.number = number;
     }
-    public int getVirtualAddress()
-    {
-        return virtualAddress;
+
+    public boolean isRadius() {
+        return r;
     }
-    public void setVirtualAddress(int virtualAddress)
-    {
-        this.virtualAddress = virtualAddress;
-    }       
+
+    public void setPresence(boolean presence) {
+        this.presence = presence;
+    }
+
+    public void setRadius(boolean r) {
+        this.r = r;
+    }
+
 }

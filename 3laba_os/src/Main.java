@@ -3,16 +3,14 @@ import java.util.Random;
 public class Main {
 	static Random rand = new Random();
 
-	public static void main (String[] args) {
-		OperatingSystem operatingSystem = new OperatingSystem(256, 64);
-		for (int processId = 0; processId < rand.nextInt(5); processId++) {
-			operatingSystem.addProcess();
-			for (int pageId = 0; pageId < operatingSystem.getProcess(processId).getCountPages(); pageId++) {
-				operatingSystem.addPage(processId);
+	public static void main(String[] args) {
+		Memory memory = new Memory(256, 64);
+
+		int index = rand.nextInt(5);
+		while (true) {
+			if (index >= 0 && index < memory.getSize()) {
+				memory.inputNumber(index);
 			}
-			operatingSystem.printMemory();
 		}
-		operatingSystem.printMemory();
-		System.out.println();
 	}
 }
