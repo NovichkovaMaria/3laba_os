@@ -6,11 +6,8 @@ public class Main {
 	public static void main(String[] args) {
 		Memory memory = new Memory(256, 64);
 
-		int index = rand.nextInt(5);
-		while (true) {
-			if (index >= 0 && index < memory.getSize()) {
-				memory.inputNumber(index);
-			}
+		for (int i = 0; i < 20; i++) {
+			memory.inputNumber(rand.nextInt(memory.getSize()));
 		}
 	}
 }
